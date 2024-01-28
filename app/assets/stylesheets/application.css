@@ -13,3 +13,165 @@
  *= require_tree .
  *= require_self
  */
+/* application.css */
+
+/* Body styles */
+
+/* Colors */
+:root {
+  --color-off-white: #f9fafa;
+  --color-light-gray: #d4d9dd;
+  --color-medium-gray: #576366;
+  --color-dark-gray: #474545;
+  --color-blue: #387bab;
+}
+
+/* Common styles */
+:root {
+  --border-radius: 4px;
+  --font-family: 'Roboto', sans-serif;
+  --body-font-size: 2rem;
+  --small-font-size: 1.8rem;
+  --width: 60%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: var(--body-font-size);
+  background-color: white;
+  color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+
+/* Header */
+.header {
+  width: var(--width);
+  text-align: left;
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 1.5rem 0 3rem;
+}
+
+/* Subheader */
+.subheader {
+  text-align: left;
+  color: var(--color-dark-gray);
+  font-size: var(--small-font-size);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.form {
+  width: var(--width);
+  background-color: white;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.input-button {
+  width: 100%;
+  display: flex;
+}
+
+.input {
+  box-sizing: border-box;
+  flex: 1;
+  font-size: var(--body-font-size);
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-light-gray) transparent var(--color-light-gray) var(--color-light-gray);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  color: var(--color-dark-gray);
+  padding: .75rem 1rem;
+}
+
+.button {
+  box-sizing: border-box;
+  background-color: var(--color-blue);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-blue) var(--color-blue) var(--color-blue) transparent;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1.2rem 1.5rem;
+}
+
+/* Sentence */
+.sentence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: var(--width);
+  position: relative;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+.sentence::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border: .7rem solid var(--color-light-gray);
+  border-width: 0 0 0 .7rem;
+}
+
+.sentence__expression {
+  margin-bottom: 2rem;
+}
+
+.sentence__expressor {
+  color: var(--color-dark-gray);
+}
+
+/* Question */
+.question {
+  background-color: white;
+}
+
+/* Answer */
+.answer {
+  background-color: lightyellow;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
